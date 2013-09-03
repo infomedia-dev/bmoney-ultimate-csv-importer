@@ -78,12 +78,12 @@ class BM_Ultimate_CSV_Importer {
 			
 			if(class_exists('WP_GitHub_Updater')){
 				$config = array(
-					'slug' => 'bmoney-ultimate-csv-importer/ultimate-csv-importer.php', // this is the slug of your plugin
-					'proper_folder_name' => 'bmoney-ultimate-csv-importer', // this is the name of the folder your plugin lives in
-					'api_url' => 'https://api.github.com/solepixel/bmoney-ultimate-csv-importer', // the github API url of your github repo
-					'raw_url' => 'https://raw.github.com/solepixel/bmoney-ultimate-csv-importer/master/', // the github raw url of your github repo
-					'github_url' => 'https://github.com/solepixel/bmoney-ultimate-csv-importer', // the github url of your github repo
-					'zip_url' => 'https://github.com/solepixel/bmoney-ultimate-csv-importer/archive/master.zip', // the zip url of the github repo
+					'slug' => 'infomedia-csv-importer/ultimate-csv-importer.php', // this is the slug of your plugin
+					'proper_folder_name' => 'infomedia-csv-importer', // this is the name of the folder your plugin lives in
+					'api_url' => 'https://api.github.com/infomedia-dev/infomedia-csv-importer', // the github API url of your github repo
+					'raw_url' => 'https://raw.github.com/infomedia-dev/infomedia-csv-importer/master/', // the github raw url of your github repo
+					'github_url' => 'https://github.com/infomedia-dev/infomedia-csv-importer', // the github url of your github repo
+					'zip_url' => 'https://github.com/infomedia-dev/infomedia-csv-importer/archive/master.zip', // the zip url of the github repo
 					'sslverify' => false, // wether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
 					'requires' => '3.0', // which version of WordPress does your plugin require?
 					'tested' => '3.5', // which version of WordPress is your plugin tested up to?
@@ -148,9 +148,8 @@ class BM_Ultimate_CSV_Importer {
 	function admin_tabs($current='importer'){
 		$tabs = array(
 			'importer' => 'Importer',
-			'exporter' => 'Exporter',
 			'logs' => 'Logs',
-			'tools' => 'Tools'
+			'crons' => 'Crons'
 		);
 		
 		$tabs_html = get_screen_icon('tools');
@@ -328,7 +327,6 @@ class BM_Ultimate_CSV_Importer {
 	 */
 	function logs(){
 		$import_log = get_option(BMUCI_OPT_PREFIX.'import_log', array());
-		$cron_log = get_option(BMUCI_OPT_PREFIX.'cron_log', array());
 		$last_increment = get_option(BMUCI_OPT_PREFIX.'increment_last', NULL);
 		
 		$crons = _get_cron_array();
@@ -340,7 +338,27 @@ class BM_Ultimate_CSV_Importer {
 			}
 		}
 		
-		return compact(array('import_log', 'cron_log', 'last_increment', 'next_cron'));
+		return compact(array('import_log', 'last_increment'));
+	}
+
+	/**
+	 * BM_Ultimate_CSV_Importer::crons()
+	 * 
+	 * @return
+	 */
+	function crons(){
+		$cron_log = get_option(BMUCI_OPT_PREFIX.'cron_log', array());
+		
+		$crons = _get_cron_array();
+		$next_cron = NULL;
+		foreach($crons as $stamp => $cron){
+			if(isset($cron[BMUCI_OPT_PREFIX.'scheduled_import'])){
+				$next_cron = $stamp;
+				break;
+			}
+		}
+		
+		return compact(array('cron_log', 'next_cron'));
 	}
 	
 	/**
@@ -455,24 +473,25 @@ class BM_Ultimate_CSV_Importer {
 	function _update_log($key='import_log', $append=false){
 		if(count($this->log)){
 			$log = $this->log;
+			
+			$prev_log = get_option(BMUCI_OPT_PREFIX.$key);
+
 			if($append){
-				$prev_log = get_option(BMUCI_OPT_PREFIX.$key);
 				if(is_array($prev_log)){
 					$log = array_merge($prev_log, $log);
 				}
 			}
+			
 			update_option(BMUCI_OPT_PREFIX.$key, $log);
 		}
 	}
 	
 	function log($contents=NULL){
-		if($this->debug_mode){
-			if($contents){
-				$this->log[$this->_get_time()] = $contents;
-			}
-			if($contents === NULL){
-				return $this->log;
-			}
+		if($contents){
+			$this->log[$this->_get_time('U')] = $contents;
+		}
+		if($contents === NULL){
+			return $this->log;
 		}
 	}
 	
@@ -500,7 +519,9 @@ class BM_Ultimate_CSV_Importer {
 	 * @return
 	 */
 	function _do_import($columns, $data=array()){
-		$this->log('Import Started');
+		$current_user = wp_get_current_user();
+
+		$this->log('Import Started - by '.$current_user->user_login );
 		do_action('bmuci_before_import', $this);
 		
 		$headings = $data['headings'];
@@ -543,7 +564,7 @@ class BM_Ultimate_CSV_Importer {
 				}
 			}
 			
-			$this->log('Building Columns');
+			//$this->log('Building Columns');
 			
 			# setup custom columns
 			if(is_array($columns) && count($columns) > 0){
@@ -560,7 +581,7 @@ class BM_Ultimate_CSV_Importer {
 				}
 			}
 			
-			$this->log('Matching Columns');
+			//$this->log('Matching Columns');
 			
 			# loop through each column to match with database
 			foreach($row as $key => $value){
@@ -588,7 +609,7 @@ class BM_Ultimate_CSV_Importer {
 			do_action('bmuci_before_row_import', $import_data, $row, $this);
 			
 			if(count($import_data) > 0){
-				$this->log('Starting Insert');
+				//$this->log('Starting Insert');
 				$user_role = $import_data['user_role']; // do this before any filters
 				
 				$original_import_data = $import_data;
@@ -626,11 +647,11 @@ class BM_Ultimate_CSV_Importer {
 								}
 							}
 						}
-						$this->log('Post meta insert complete');
+						//$this->log('Post meta insert complete');
 						
 						$this->finalize_storage($post_id);
 						
-						$this->log('Post meta storage insert complete');
+						//$this->log('Post meta storage insert complete');
 						
 						$this->total_imported++;
 					} else {
@@ -695,18 +716,21 @@ class BM_Ultimate_CSV_Importer {
 						$this->total_imported++;
 					} else {
 						if(is_object($user_id)){
-							$this->errors[] = 'ERROR on row '.$counter.': '.$user_id->get_error_message().' ('.$import_data['user_login'].')';
+							$cError = 'ERROR on row '.$counter.': '.$user_id->get_error_message().' ('.$import_data['user_login'].')';
+
+							$this->log($cError);
+							$this->errors[] = $cError;
 							$this->failed_imports++;
 						}
 						$id = false;
 					}
 				}
 				
-				$this->log('Row Insertion complete');
+				//$this->log('Row Insertion complete');
 				$imported_data[] = $row;
 				
 				update_option(BMUCI_OPT_PREFIX.'increment_last', $counter);
-				$this->log('Last Increment value updated');
+				//$this->log('Last Increment value updated');
 				
 				if($this->debug_mode && $counter == apply_filters('bmuci_debug_counter', 20)) break;
 				
@@ -716,7 +740,7 @@ class BM_Ultimate_CSV_Importer {
 				if($this->end && $counter >= $this->end) break;
 				
 			} elseif($this->import_type == 'other'){
-				# let's just let the user define what needs to happen shall we.
+				# just let the user define what needs to happen.
 				do_action('bmuci_custom_import', $this, $row);
 				$imported_data[] = $row;
 				$id = $this->id;
@@ -733,6 +757,7 @@ class BM_Ultimate_CSV_Importer {
 		$this->log('Import complete');
 		$this->log('Successful Imports: '. count($imported_data));
 		$this->log('Failed Imports: '.$this->failed_imports);
+		$this->log('##ENDLOG##');
 		$this->_update_log();
 		
 		return $imported_data;

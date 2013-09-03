@@ -1,0 +1,416 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Workout",
+				"workout_sets"
+			],
+			[
+				"p",
+				"page_title"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-content/plugins/ultimate-csv-importer.php",
+			"settings":
+			{
+				"buffer_size": 792,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/matthew/infomedia/wordpress-plugins/infomedia-csv-importer/classes/bm-ultimate-csv-importer.class.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/.htaccess",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/str_replace_db.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-settings.php",
+		"/home/matthew/infomedia/wordpress-plugins/infomedia-csv-importer/README.md",
+		"/home/matthew/infomedia/php-upload-progress-bar/upload.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-content/plugins/infomedia-csv-importer/ultimate-csv-importer.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-config.php",
+		"/home/matthew/Desktop/instructions",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-activate.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-includes/default-constants.php",
+		"/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-includes/.htaccess",
+		"/home/matthew/infomedia/projects/cocacolaunited/Employee List_08232013_Test File.xls",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/application_controller.rb",
+		"/home/matthew/rails_projects/rsvp/app/controllers/attendees_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/templates_controller.rb",
+		"/home/matthew/rails_projects/rsvp/app/views/attendees/index.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/templates/index.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/controllers/sessions_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/config/routes.rb",
+		"/home/matthew/rails_projects/rsvp/app/controllers/application_controller.rb",
+		"/home/matthew/rails_projects/rsvp/app/controllers/index_controller.rb",
+		"/home/matthew/rails_projects/rsvp/app/models/user.rb",
+		"/home/matthew/rails_projects/rsvp/Gemfile",
+		"/home/matthew/rails_projects/git_humungus/app/views/users/new.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/views/users/new.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/controllers/users.rb",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/users_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/Gemfile",
+		"/home/matthew/rails_projects/git_humungus/app/models/user.rb",
+		"/home/matthew/rails_projects/rsvp/db/schema.rb",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/exercises_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/index_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/app/helpers/sessions_helper.rb",
+		"/home/matthew/rails_projects/rsvp/app/helpers/sessions_helper.rb",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/sessions_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/exercises/show.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/views/attendees/new.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/views/attendees/show.html.erb",
+		"/home/matthew/rails_projects/rsvp/config/routes.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/sessions/new.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/views/sessions/new.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/exercises/index.html.erb",
+		"/home/matthew/rails_projects/rsvp/db/migrate/20130604005943_add_users.rb",
+		"/home/matthew/rails_projects/git_humungus/db/schema.rb",
+		"/home/matthew/rails_projects/rsvp/db/migrate/20130604005535_add_users.rb",
+		"/home/matthew/rails_projects/rsvp/app/helpers/index_helper.rb",
+		"/home/matthew/rails_projects/rsvp/app/views/index/home.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/shared/_errors_users.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/views/layouts/application.html.erb",
+		"/home/matthew/rails_projects/rsvp/app/helpers/attendees_helper.rb",
+		"/home/matthew/rails_projects/rsvp/app/assets/javascripts/home.js.coffee",
+		"/home/matthew/rails_projects/rsvp/app/controllers/home_controller.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/templates/new.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/humungus.css.scss",
+		"/home/matthew/rails_projects/git_humungus/app/views/workouts/new.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/templates/edit.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_site-header.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/users/edit.html.erb",
+		"/home/matthew/rails_projects/bootstrap/css/bootstrap-responsive.css",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_sidebar.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/forms.css.scss",
+		"/home/matthew/.cache/.fr-9lvrTu/css/bootstrap.css",
+		"/home/matthew/.cache/.fr-EL7rgH/css/bootstrap.css",
+		"/home/matthew/rails_projects/git_humungus/config/environments/production.rb",
+		"/home/matthew/rails_projects/git_humungus/config/application.rb",
+		"/home/matthew/rails_projects/git_humungus/vendor/assets/javascripts/jqplot.dateAxisRenderer.min.js",
+		"/home/matthew/rails_projects/git_humungus/vendor/assets/javascripts/jquery.jqplot.min.js",
+		"/home/matthew/rails_projects/git_humungus/app/assets/javascripts/application.js",
+		"/home/matthew/rails_projects/git_humungus/app/controllers/workouts_controller.rb",
+		"/home/matthew/.cache/.fr-l7FOyh/bootstrap/css/bootstrap-responsive.css",
+		"/home/matthew/.cache/.fr-WFReN6/bootstrap/css/bootstrap.css",
+		"/home/matthew/rails_projects/git_humungus/.git/COMMIT_EDITMSG",
+		"/home/matthew/rails_projects/git_humungus/app/views/index/home.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_weight-chart.html.erb",
+		"/home/matthew/rails_projects/git_humungus/config/database.yml",
+		"/home/matthew/rails_projects/first_app/Gemfile",
+		"/home/matthew/rails_projects/first_app/config/database.yml",
+		"/home/matthew/rails_projects/git_humungus/app/helpers/application_helper.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_progress-chart.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/javascripts/custom.js",
+		"/home/matthew/rails_projects/git_humungus/app/views/workouts/show.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/workouts.css.scss",
+		"/home/matthew/.cache/.fr-BqUuva/twitter-bootstrap-d9b502d/docs/assets/css/bootstrap.css",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130531032715_add_defaults.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/shared/_errors_templates.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/models/workout.rb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/buttons.css.scss",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/templates.css.scss",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/navbar.css.scss",
+		"/home/matthew/rails_projects/git_humungus/app/views/workouts/index.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_progress-charts.html.erb",
+		"/home/matthew/rails_projects/git_humungus/config/locales/en.yml",
+		"/home/matthew/rails_projects/git_humungus/app/assets/javascripts/jquery.jqplot.min.js",
+		"/home/matthew/rails_projects/git_humungus/app/assets/javascripts/jqplot.dateAxisRenderer.min.js",
+		"/home/matthew/rails_projects/git_humungus/app/assets/javascripts/workouts.js.coffee",
+		"/home/matthew/rails_projects/bootstrap/css/bootstrap.css",
+		"/home/matthew/rails_projects/git_humungus/app/models/template.rb",
+		"/home/matthew/rails_projects/git_humungus/app/models/workout_set.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529034142_renamesetcolumn.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529030805_create_exercise_template_join_table.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529032256_delete.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529033308_change_column.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529030407_drop_table_exercises_templates.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529023956_create_exercises_templates_join_table.rb",
+		"/home/matthew/rails_projects/git_humungus/app/models/exercise.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130529014105_create_exercises_templates_join_table.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130527192531_add_indexes.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130528134105_modify_relational_table.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130527002444_modify_database.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130527004034_more_changes.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130526235855_delete_public_from_exercises.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130526233721_add_public_to_exercises.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130526231853_create_exercises.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130525193229_expand_user_model.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/users/index.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/bootstrap-dropdowns.css",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130526054118_rename_userid_to_workouts.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/_site-footer.html.erb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130526011235_add_token_to_users.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/shared/_errors.html.erb",
+		"/home/matthew/rails_projects/git_humungus/app/shared/errors.erb",
+		"/home/matthew/rails_projects/git_humungus/app/validators/email_validator.rb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130525203419_rename_password_hash.rb",
+		"/home/matthew/rails_projects/git_humungus/app/views/layouts/application.html.erb",
+		"/home/matthew/rails_projects/git_humungus/db/migrate/20130525200217_add_index_to_users_email.rb",
+		"/home/matthew/rails_projects/git_humungus/config/environments/development.rb",
+		"/home/matthew/rails_projects/git_humungus/app/assets/stylesheets/jquery.jqplot.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"admin_page",
+			"ccbcu_get_user_location",
+			"hi",
+			"span11",
+			"span13",
+			"span4",
+			"span13",
+			"span",
+			"span12",
+			"span13",
+			"span",
+			"h1",
+			"optimize",
+			"h1",
+			"span",
+			"input-small",
+			"input",
+			"input-small",
+			"table-str",
+			"table-",
+			"table",
+			"form-text",
+			"label",
+			"navbar-form",
+			"navbar-inner\nnavbar-text",
+			"navbar-inner\nnavbar-inner",
+			"navbar-inner\n",
+			":{\n",
+			"table-striped",
+			"btn-inf",
+			"bread",
+			"userid",
+			"templateid",
+			"typeid",
+			"userid",
+			"well",
+			"text-warning",
+			"btn-warning",
+			"btn-",
+			"text-warning",
+			"btn-info",
+			"dropdown-toggle",
+			"control-label",
+			"control-group",
+			"control-label",
+			"control",
+			"btn-",
+			"workouts",
+			"nav-pills",
+			"span5",
+			"main-container",
+			"span4",
+			"span",
+			"span5",
+			"span3",
+			"span9",
+			"error",
+			"form",
+			"h1",
+			"text-center",
+			"center-text",
+			"text-center",
+			"center",
+			"btn",
+			".btn",
+			"btn",
+			"center",
+			"clear",
+			"pull",
+			"span4",
+			"form-",
+			"form-inline",
+			"span4",
+			"offset",
+			"span6",
+			"span3",
+			"span",
+			"span6",
+			"offset",
+			"content",
+			"content-inner",
+			"content",
+			"content-",
+			"center",
+			"offset",
+			"span4",
+			"span",
+			"pill",
+			"h4",
+			"title",
+			"page-header",
+			"alert",
+			"dropdown",
+			"dropdown-menu",
+			"html",
+			".nav",
+			"span3",
+			"hr",
+			"nav\n}",
+			"%nav%\n}",
+			"nav\n}",
+			"nav-list\n}",
+			"\n}",
+			";\n",
+			"bodyweight\n",
+			";\n",
+			"Chrome",
+			"#",
+			"span4",
+			"row"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/matthew/infomedia/projects/matt.dev.infomedia.net/wp-content/plugins/ultimate-csv-importer.php",
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/matthew/infomedia/projects/matt.dev.infomedia.net/matt-dev.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true
+}
