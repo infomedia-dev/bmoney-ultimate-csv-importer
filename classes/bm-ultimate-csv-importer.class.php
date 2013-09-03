@@ -488,7 +488,7 @@ class BM_Ultimate_CSV_Importer {
 	
 	function log($contents=NULL){
 		if($contents){
-			$this->log[$this->_get_time('U')] = $contents;
+			$this->log[$this->_get_time()] = $contents;
 		}
 		if($contents === NULL){
 			return $this->log;
@@ -505,7 +505,7 @@ class BM_Ultimate_CSV_Importer {
 		if($string){
 			$time = microtime();
 			$time = ltrim(substr($time, 0, strpos($time, ' ')), '0');
-			$time = date('Y-m-d H:i:s').$time;
+			$time = date('U');
 			return $time;
 		}
 		return microtime(true);
